@@ -1,0 +1,155 @@
+.chart-panel {
+  padding: 24px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.header-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.header-info p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Tabs */
+.chart-type-tabs {
+  display: flex;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chart-type-tabs button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.chart-type-tabs button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.chart-type-tabs button.active-tab {
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+}
+
+/* Settings & Canvas split */
+.chart-workspace {
+  display: flex;
+  gap: 25px;
+}
+
+.chart-settings {
+  width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  padding-right: 25px;
+}
+
+.setting-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.setting-group label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.setting-group select {
+  width: 100%;
+}
+
+.chart-summary-alert {
+  background: rgba(6, 182, 212, 0.05);
+  border: 1px solid rgba(6, 182, 212, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-top: 10px;
+}
+
+.chart-summary-alert p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.chart-canvas {
+  flex-grow: 1;
+  min-width: 0; /* Important for flex child resize and Recharts container width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: var(--text-secondary);
+  height: 320px;
+  text-align: center;
+  padding: 40px;
+}
+
+.chart-placeholder p {
+  font-size: 0.95rem;
+  max-width: 320px;
+}
+
+@media (max-width: 968px) {
+  .chart-workspace {
+    flex-direction: column;
+  }
+  
+  .chart-settings {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-right: 0;
+    padding-bottom: 25px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .setting-group {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .chart-summary-alert {
+    width: 100%;
+    margin-top: 0;
+  }
+}

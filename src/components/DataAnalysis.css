@@ -1,0 +1,287 @@
+.analysis-panel {
+  padding: 24px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.analysis-header {
+  margin-bottom: 25px;
+}
+
+.analysis-header h3 {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.analysis-header p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.numeric-comparison {
+  margin-bottom: 30px;
+}
+
+.numeric-comparison h4, .column-accordion-section h4 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-left: 3px solid var(--primary);
+  padding-left: 8px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.comparison-table th, .comparison-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.comparison-table th {
+  color: var(--text-secondary);
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.comparison-row {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.comparison-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--primary);
+}
+
+.font-semibold {
+  font-weight: 500;
+}
+
+.text-warn {
+  color: var(--warning) !important;
+}
+
+/* Accordion list */
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordion-item {
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.accordion-item.is-expanded {
+  border-color: var(--border-color-hover);
+  background: rgba(22, 26, 44, 0.4);
+}
+
+.accordion-trigger {
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.trigger-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.col-type-icon {
+  flex-shrink: 0;
+}
+
+.col-title-text {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.badge-type {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.badge-numeric {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary);
+}
+
+.badge-categorical {
+  background: rgba(168, 85, 247, 0.1);
+  color: var(--accent-purple);
+}
+
+.trigger-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.completeness-summary {
+  font-size: 0.8rem;
+}
+
+.accordion-content {
+  padding: 0 20px 20px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  animation: slideDown 0.25s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Completeness Bar */
+.completeness-bar-container {
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.bar-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.progress-bar-bg {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s ease-out;
+}
+
+.bg-primary-fill {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.bg-warning-fill {
+  background: linear-gradient(90deg, var(--warning), var(--primary));
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.metric-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.metric-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: 'Outfit', monospace;
+}
+
+.metric-value-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Frequencies distribution list */
+.frequencies-container {
+  border-top: 1px dashed rgba(255, 255, 255, 0.05);
+  padding-top: 16px;
+}
+
+.frequencies-container h5 {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.freq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.freq-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.freq-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.freq-value {
+  font-weight: 500;
+  color: var(--text-primary);
+  max-width: 70%;
+}
+
+.freq-counts {
+  color: var(--text-secondary);
+}
+
+.freq-bar-bg {
+  height: 5px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 2px;
+}
+
+.freq-bar-fill {
+  height: 100%;
+  background: var(--accent-purple);
+  border-radius: 2px;
+  opacity: 0.65;
+}
+
+.freq-item:hover .freq-bar-fill {
+  opacity: 1;
+  background: linear-gradient(90deg, var(--accent-purple), var(--primary));
+}

@@ -1,0 +1,7 @@
+node_modules
+dist
+.env
+*.xlsx
+server/data/local_db.json
+create_sample_excel.js
+.git
