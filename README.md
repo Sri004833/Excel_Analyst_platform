@@ -117,3 +117,4 @@ The application is pre-configured to run out-of-the-box in serverless cloud envi
 ### Persistent Database Configuration
 *   **Serverless Ephemeral Storage:** On Vercel, if no MongoDB URI is set, the backend stores uploaded sheets in Vercel's temporary `/tmp` directory. Uploaded spreadsheets will be fully functional but will clear when the serverless function cold-starts.
 *   **Connecting persistent MongoDB:** To store uploaded records permanently, create a free database cluster on **MongoDB Atlas**, copy the connection string, and add it as an Environment Variable named `MONGODB_URI` in your Vercel Project Settings.
+  Live Project: https://excel-analyst-platform.vercel.app/
